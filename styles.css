@@ -3,9 +3,13 @@
     margin: auto;
 }
 
+#card-color {
+    margin-bottom: 30px;
+}
+
 #card-color input[type="color"] {
-    height: 60%;
-    margin-bottom: 50px;
+    width: 100%;
+    height: 50px;
 }
 
 .card-container {
