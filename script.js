@@ -5,7 +5,7 @@ function submitForm() {
         title: titleValue,
         description: descriptionValue,
     };
-    console.log(data);
+    console.log(data, "\nOne card created");
 
     var template = document.querySelector("#card-template");
     var clone = template.content.cloneNode(true);
