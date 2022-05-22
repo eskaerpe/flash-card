@@ -1,7 +1,4 @@
 function submitForm() {
-    console.log("klahjjksahds");
-    // var title = document.getElementById("title");
-    // var description = document.getElementById("description");
     var titleValue = document.getElementById("title").value;
     var descriptionValue = document.getElementById("description").value;
     var data = {
