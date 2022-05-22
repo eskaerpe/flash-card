@@ -26,9 +26,24 @@
                             <div class="mb-3">
                                 <input type="text" class="form-control" id="title" placeholder="Title" />
                             </div>
-                            <div class="mb-3" ">
+                            <div class="mb-3">
                                 <textarea class="form-control" id="description" rows="5" placeholder="Description"></textarea>
                             </div>
+                            <div class="row user-color" id="card-color">
+                                <div class="col">
+                                    <label for="card-color">Front Color :</label>
+                                    <input type="color" class="form-control" id="front-color" />
+                                </div>
+                                <div class="col">
+                                    <label for="card-color">Back Color :</label>
+                                    <input type="color" class="form-control" id="back-color" />
+                                </div>
+                                <div class="col">
+                                    <label for="card-color">Text Color :</label>
+                                    <input type="color" class="form-control" id="text-color" />
+                                </div>
+                            </div>
+
                             <button type="button" class="btn btn-primary" onclick="submitForm()">Add</button>
                         </form>
                     </div>
@@ -39,15 +54,21 @@
         <!-- Cards -->
         <section id="all-card">
             <div class="container">
-                <div class="row justify-content-center mb-4" id="card-place">
-                    <div class="col-md-4" id="my-flash-card">
+                <div class="row justify-content-center" id="card-place">
+                    <div class="col-md-4 mb-4" id="my-flash-card">
                         <div class="card-container">
                             <div class="thecard">
-                                <div class="thefront">
-                                    <h3>Title<br> (hold to reveal)</h3>
+                                <div class="thefront" style="background: #67a4f3">
+                                    <h3>
+                                        Title<br />
+                                        (hold to reveal)
+                                    </h3>
                                 </div>
-                                <div class="theback">
-                                    <p>Description <br> You can put anything here by typing in the description form, then click "add". </p>
+                                <div class="theback" style="background: #f3bb67">
+                                    <p>
+                                        Description <br />
+                                        You can put anything here by typing in the description form, then click "add".
+                                    </p>
                                 </div>
                             </div>
                         </div>
