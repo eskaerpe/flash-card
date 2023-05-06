@@ -34,3 +34,16 @@ function submitForm() {
     // apply all change to the page
     document.querySelector("#card-place").append(clone);
 }
+
+function downloadPage() {
+    var html = document.documentElement.outerHTML;
+    var blob = new Blob([html], { type: "text/html" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+
+    var titleValue = document.getElementById("title").value;
+
+    a.download = `Flash Card ${titleValue}.html`;
+    a.href = url;
+    a.click();
+}
