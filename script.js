@@ -44,7 +44,7 @@ function downloadPage() {
     var url = URL.createObjectURL(blob);
     var a = document.createElement("a");
 
-    var titleValue = document.getElementById("title").value;
+    var titleValue = document.getElementById("judul-flash-card").value;
 
     a.download = `Flash Card ${titleValue}.html`;
     a.href = url;
