@@ -43,9 +43,11 @@
                                     <input type="color" class="form-control" id="text-color" />
                                 </div>
                             </div>
-                            <div class="user-button">
-                                <button type="button" class="btn btn-primary" onclick="submitForm()">Tambah</button>
-                                <button type="button" class="btn btn-primary" onclick="downloadPage()" id="download-btn">Download</button>
+                            <div class="user-button row ">
+                                <button type="button" class="btn btn-primary col m-2" onclick="submitForm()">Tambah</button>
+                                <button type="button" class="btn btn-primary col m-2" onclick="downloadPage()" id="download-btn">Download</button>
+                                <button type="button" class="btn btn-secondary col m-2" onclick="resetPage()">Reset</button>
+
                             </div>
                         </form>
                     </div>
@@ -57,14 +59,15 @@
         <section id="all-card">
             <div class="container">
                 <div class="row justify-content-center" id="card-place">
-                    <div class="col-md-4 mb-4" id="my-flash-card">
+                    <div class="col-md-4 mb-4 my-flash-card-sample" id="my-flash-card-body-sample">
                         <div class="card-container">
-                            <div class="thecard">
+                            <div class="thecard pb-3">
                                 <div class="thefront" style="background: #67a4f3">
-                                    <h3>
+                                    <button onclick="removeCardSample()" type="button" class="remove-button btn btn-danger m-2">remove</button>
+                                    <h3 class="card-title"> 
                                         Judul<br />
                                         (tekan untuk melihat)
-                                    </h3>
+                                    </h3 class="card-text"> 
                                 </div>
                                 <div class="theback" style="background: #f3bb67">
                                     <p>
@@ -80,10 +83,11 @@
         </section>
 
         <template id="card-template">
-            <div class="col-md-4 mb-4" id="my-flash-card">
+            <div class="col-md-4 mb-4" id="my-flash-card-body">
                 <div class="card-container">
                     <div class="thecard">
                         <div class="thefront">
+                            <button onclick="removeCard()" type="button" class="remove-button btn btn-danger m-2">remove</button>
                             <h3 class="card-title">Judul</h3>
                         </div>
                         <div class="theback">

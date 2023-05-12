@@ -24,6 +24,9 @@ function submitForm() {
 
     // adding specific class name to the card
     clone.querySelector(".thecard").classList.add(`thecard-${cardNumber}`);
+    clone.querySelector("#my-flash-card-body").classList.add(`my-flash-card-${cardNumber}`);
+    // clone.querySelector(".remove-button").classList.add(`remove-card-${cardNumber}`);
+    clone.querySelector(".remove-button").setAttribute("onclick", `removeCard(${cardNumber})`);
 
     // adding card style by user request from the form
     clone.querySelector(".thefront").style.backgroundColor = document.querySelector("#front-color").value;
@@ -46,4 +49,28 @@ function downloadPage() {
     a.download = `Flash Card ${titleValue}.html`;
     a.href = url;
     a.click();
+}
+
+function removeCard(cardNumber) {
+    var card = document.querySelector(`.my-flash-card-${cardNumber}`);
+
+    card.parentNode.removeChild(card);
+    card.remove();
+    // card.style.opacity = 1;
+    // var fadeEffect = setInterval(function () {
+    //     if (card.style.opacity > 0) {
+    //         card.style.opacity -= 0.1;
+    //     } else {
+    //         clearInterval(fadeEffect);
+    //     }
+    // }, 50);
+}
+
+function removeCardSample() {
+    var card = document.querySelector(".my-flash-card-sample");
+    card.remove();
+}
+
+function resetPage() {
+    location.reload();
 }

@@ -62,3 +62,12 @@
     padding: 20px;
     margin-top: 15px;
 }
+
+.fade-out {
+    opacity: 0;
+}
+
+.card-title {
+    position: relative;
+    top: -20%;
+}
